@@ -34,6 +34,10 @@ Ajv.prototype.addType = function (name, opt) {
 
 // TODO hierarchy search
 Ajv.prototype.getSuperSchema = function (originalSchema) {
+  if (typeof originalSchema !== 'object') {
+    return originalSchema
+  }
+
   // BUG not working... schema chages originalSchema object
   // const schema = Object.assign({}, originalSchema)
   // const schema = Object.create(originalSchema)
