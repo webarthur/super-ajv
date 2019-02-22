@@ -21,9 +21,12 @@
     "json-schema-validation"
   ],
   "author": "Arthur Araújo <webarthur@gmail.com> (https://araujo.cc)",
-	"license": "GNU",
+  "license": "GNU",
   "bugs": {
     "url": "https://github.com/webarthur/super-ajv/issues"
   },
-  "homepage": "https://github.com/webarthur/super-ajv#readme"
+  "homepage": "https://github.com/webarthur/super-ajv#readme",
+  "dependencies": {
+    "ajv": "^6.9.1"
+  }
 }
