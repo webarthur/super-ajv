@@ -93,16 +93,12 @@ Ajv.prototype.getSuperSchema = function (originalSchema) {
   return schema
 }
 
-// Save default compile functions to convert super types
-Ajv.prototype._super_compile = Ajv.prototype.compile
-Ajv.prototype._super_compileAsync = Ajv.prototype.compileAsync
+// Save default validate functions to convert super types
+Ajv.prototype._super_validate = Ajv.prototype.validate
 
-// Redefine compile functions
-Ajv.prototype.compile = function (schema) {
-  return this._super_compile(this.getSuperSchema(schema))
-}
-Ajv.prototype.compileAsync = function (schema) {
-  return this._super_compileAsync(this.getSuperSchema(schema))
+// Redefine validate functions
+Ajv.prototype.validate = function (schema, data) {
+  return this._super_validate(this.getSuperSchema(schema), data)
 }
 
 module.exports = Ajv
