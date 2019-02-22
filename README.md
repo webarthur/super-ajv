@@ -74,9 +74,7 @@ node test/
 
 # License
 
-```
-npm test
-```
+[GNU](https://github.com/webarthur/super-ajv/blob/master/LICENSE)
 
 > "Simplicity is the ultimate sophistication" <br>
 > Da Vinci
