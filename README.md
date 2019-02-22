@@ -1,6 +1,6 @@
 # Super AJV
 
-[AJV validator](https://github.com/epoberezkin/ajv) with super powers! See also de [AJV full documentation](https://github.com/epoberezkin/ajv).
+[AJV validator](https://github.com/epoberezkin/ajv) with super powers! See also the [AJV full documentation](https://github.com/epoberezkin/ajv).
 
 ## Contents
 
