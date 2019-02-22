@@ -1,0 +1,30 @@
+{
+  "name": "super-ajv",
+  "version": "1.0.9",
+  "description": "AJV validator with super powers!",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webarthur/super-ajv.git"
+  },
+  "keywords": [
+    "mongodb",
+    "mongoose",
+    "model",
+    "promise",
+    "schema",
+    "database",
+    "odm",
+    "nosql",
+    "orm"
+  ],
+  "author": "Arthur Araújo <webarthur@gmail.com> (https://araujo.cc)",
+	"license": "GNU",
+  "bugs": {
+    "url": "https://github.com/webarthur/super-ajv/issues"
+  },
+  "homepage": "https://github.com/webarthur/super-ajv#readme"
+}
