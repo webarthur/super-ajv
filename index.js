@@ -64,10 +64,10 @@ Ajv.prototype.getSuperSchema = function (originalSchema) {
     // Check if the property is a super type
     if (this.superTypes[props[key].type]) {
       // Extends the prop attributes
+      delete props[key].type
       Object.assign(
         props[key],
-        this.superTypes[props[key].type],
-        { type: 'string' })
+        this.superTypes[props[key].type])
     }
 
     // Check super required property

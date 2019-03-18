@@ -1,6 +1,6 @@
 {
   "name": "super-ajv",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "AJV schema validator with super powers!",
   "main": "index.js",
   "scripts": {
