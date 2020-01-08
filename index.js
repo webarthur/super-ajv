@@ -33,17 +33,7 @@ Ajv.prototype.addType = function (name, opt) {
 }
 
 // TODO hierarchy search
-Ajv.prototype.getSuperSchema = function (originalSchema) {
-  if (typeof originalSchema !== 'object') {
-    return originalSchema
-  }
-
-  // BUG not working... schema chages originalSchema object
-  // const schema = Object.assign({}, originalSchema)
-  // const schema = Object.create(originalSchema)
-
-  // Too bad for cloning objects... =/
-  const schema = JSON.parse(JSON.stringify(originalSchema))
+Ajv.prototype.processProps = function (schema) {
 
   const props = schema.properties
 
@@ -95,6 +85,19 @@ Ajv.prototype.getSuperSchema = function (originalSchema) {
   }
 
   return schema
+}
+
+Ajv.prototype.getSuperSchema = function(schema) {
+  if (typeof schema !== 'object') {
+    return schema
+  }
+  // Too bad for cloning objects... =/
+  const resSchema = JSON.parse(JSON.stringify(schema))
+  
+  if(resSchema.type === "array") 
+    resSchema.items = this.processProps(resSchema.items);
+  else resSchema = this.processProps(resSchema);
+  return resSchema;
 }
 
 // Save default validate functions to convert super types
