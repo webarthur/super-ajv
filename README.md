@@ -16,7 +16,7 @@ You can set the types you want!
 const ajv = new Ajv()
 
 ajv.addType('mongoid', {
-  compile: function () {
+  compile () {
     return function (data) {
       const re = /^(?=[a-f\d]{24}$)(\d+[a-f]|[a-f]+\d)/i
       return re.test(data)
